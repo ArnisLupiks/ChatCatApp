@@ -1,20 +1,22 @@
 <ion-view view-title="Dashboard">
   <ion-content class="padding">
+    <img src="img/paw.png" class = "cat-paw" alt="cat paw" />
     <div class="list card">
-      <div class="item item-divider">Recent Updates</div>
+
+      <div class="item item-divider">Hi there <b><span ng-bind="auth.profile.given_name"></span></b></div>
       <div class="item item-body">
         <div>
-          There is a fire in <b>sector 3</b>
+            You have joined ChatCat comunity <br/>
+
         </div>
       </div>
     </div>
     <div class="list card">
-      <div class="item item-divider">Health</div>
+      <div class="item item-divider">Find a person</div>
       <div class="item item-body">
         <div>
-          You ate an apple today!
-          <span ng-bind ="auth.profile.name"></span>
-          {{auth.profile.name}}
+          
+
         </div>
       </div>
     </div>

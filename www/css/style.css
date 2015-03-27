@@ -3,5 +3,19 @@
   height :50px;
   margin-left: auto;
     margin-right: auto;
-    
+
+}
+@font-face {
+    font-family: 'fontawesome';
+    src:url('lib/fontawesome/fonts/fontawesome-webfont.eot');
+    src:url('lib/fontawesome/fonts/fontawesome-webfont.eot') format('embedded-opentype'),
+        url('lib/fontawesome/fonts/fontawesome-webfont.woff') format('woff'),
+        url('lib/fontawesome/fonts/fontawesome-webfont.ttf') format('truetype'),
+        url('lib/fontawesome/fonts/fontawesome-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.fa fa-envelope-o:before{
+  font-fmaily:"fontawesome";
+  content: "\this"
 }

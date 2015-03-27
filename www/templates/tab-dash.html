@@ -12,21 +12,41 @@
       </div>
     </div>
     <div class="list card">
-      <div class="item item-divider">Find a person</div>
+      <div class="item item-divider">send a message</div>
       <div class="item item-body">
         <div>
-          
+                <h4>Find for the user: </h4>
+
+                <div class="row">
+
+                    <div class="col-sm-9">
+                      <div ng-include src="'templates/autocomplete.html'"></div>
+                    </div>
+                    <div class="col-sm-9">
+                      <form role="form" ng-submit="sendMessage()">
+                        <div class="form-group">
+                          <label for="comment">Message:</label>
+                          <textarea class="form-control" rows="5" id="comment" ng-model="mess" placeholder="Type message here ..." maxlength="300"></textarea>
+                          <span>{{300 - mess.length}} left</span>
+                        </div>
+                        <button type="button" class="btn btn-success btn-s" ng-click="sendMessage()">
+                          <i class="fa fa-envelope-o"></i> Send Message
+                        </button>
+                      </form>
+                    </div>
+
+                </div>
+                  <p>Device Token</p>
+                  <textarea readonly>{{regId}}</textarea>
+
+                      <ion-item ng-repeat="notification in notifications track by $index" type="item-content">
+                          {{notification}}
+                      </ion-item>
+
 
         </div>
       </div>
     </div>
-    <div class="list card">
-      <div class="item item-divider">Upcoming</div>
-      <div class="item item-body">
-        <div>
-          You have <b>29</b> meetings on your calendar tomorrow.
-        </div>
-      </div>
-    </div>
+
   </ion-content>
 </ion-view>
